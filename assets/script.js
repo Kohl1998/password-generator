@@ -120,3 +120,8 @@ generateBtn.addEventListener('click', writePassword);
 // Password should be between 10 - 64 charcters
 // Code should validate for each input and at least one character type should be selected
 // Once prompt are answered; password should be generated and displayed to page as an alert
+
+// Tools needed:
+// random function 
+// prompt + alert 
+// validation with conditional statements
