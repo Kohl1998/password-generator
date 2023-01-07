@@ -97,7 +97,7 @@ var getOptions = prompt("Here are the password options:" + upperCasedCharacters 
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+Math.floor(math.getRandom() * numericCharacters.length)
 }
 
 
