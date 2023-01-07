@@ -91,14 +91,20 @@ var upperCasedCharacters = [
 // Function to prompt user for password options
 function getPasswordOptions() {
 
+
 }
+
 
 // Function for getting a random element from an array
 function getRandom(arr) {
 
 }
 
+
+
+
 // Function to generate password with user input
+// Use prompt to collect input from user
 function generatePassword() {
 
 }
@@ -109,7 +115,7 @@ var generateBtn = document.querySelector('#generate');
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector('#password');
+  var passwordText = document.querySelector('#password'); 
 
   passwordText.value = password;
 }
@@ -120,8 +126,7 @@ generateBtn.addEventListener('click', writePassword);
 // Password should be between 10 - 64 charcters
 // Code should validate for each input and at least one character type should be selected
 // Once prompt are answered; password should be generated and displayed to page as an alert
-
 // Tools needed:
-// random function 
-// prompt + alert 
-// validation with conditional statements
+// random function to be used on arrays
+// prompt to show options
+// validation with conditional statements such as if statement
