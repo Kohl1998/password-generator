@@ -88,6 +88,10 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+// Concatenate all arrays
+var AllCharacters = specialCharacters.concat(numericCharacters, lowerCasedCharacters, upperCasedCharacters)
+console.log(AllCharacters);
+
 // Function to prompt user for password options
 function getPasswordOptions() {
 var getOptions = confirm("Here are the password characters: ")
@@ -99,9 +103,8 @@ if (getOptions == true) {
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-  // To get random element from numerical array
-return numericCharacters[Math.floor(Math.random() * numericCharacters.length)],
-console.log(getRandom());
+
+
 }
 
 
