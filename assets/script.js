@@ -99,7 +99,9 @@ if (getOptions == true) {
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-Math.floor(math.getRandom() * numericCharacters.length)
+  // To get random element from numerical array
+return numericCharacters[Math.floor(math.getRandom() * numericCharacters.length)],
+console.log(getRandom());
 }
 
 
