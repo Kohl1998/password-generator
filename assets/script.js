@@ -90,7 +90,7 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-var getOptions = confirm("Here are the password options: "); 
+var getOptions = confirm("Here are the password options: ")
 if (getOptions == true) {
   alert(lowerCasedCharacters + upperCasedCharacters + numericCharacters + specialCharacters)
 }
@@ -110,7 +110,7 @@ console.log(getRandom());
 // Function to generate password with user input
 // Use prompt to collect input from user
 function generatePassword() {
-
+var Userinput = prompt("Enter a password between 8 to 64 characters long") 
 }
 
 // Get references to the #generate element
