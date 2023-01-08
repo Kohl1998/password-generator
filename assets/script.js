@@ -103,8 +103,9 @@ if (getOptions == true) {
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
-
+  // Will select element from new concatenated array
+TotalArray = Math.floor[(Math.random * AllCharacters.length)]
+console.log(TotalArray)
 }
 
 
