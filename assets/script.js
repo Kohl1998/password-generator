@@ -90,7 +90,7 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-var getOptions = confirm("Here are the password options: ")
+var getOptions = confirm("Here are the password characters: ")
 if (getOptions == true) {
   alert(lowerCasedCharacters + upperCasedCharacters + numericCharacters + specialCharacters)
 }
@@ -100,7 +100,7 @@ if (getOptions == true) {
 // Function for getting a random element from an array
 function getRandom(arr) {
   // To get random element from numerical array
-return numericCharacters[Math.floor(math.getRandom() * numericCharacters.length)],
+return numericCharacters[Math.floor(Math.random() * numericCharacters.length)],
 console.log(getRandom());
 }
 
@@ -108,12 +108,12 @@ console.log(getRandom());
 
 
 // Function to generate password with user input
-// Use prompt to collect input from user
 function generatePassword() {
-var Userinput = prompt("Enter a password between 8 to 64 characters long");
-if (Userinput > 8 || Userinput < 64) {
+var Userinput = prompt("Enter a number between 10 & 64");
+if (Userinput > 10 || Userinput < 64) {
   alert("Thank you we are generating a password for you")
-} else if (Userinput < 8 || Userinput > 64) {
+  getPasswordOptions();
+} else if (Userinput < 10 || Userinput > 64) {
   alert("Please retry")
 } 
 }
@@ -125,7 +125,7 @@ var generateBtn = document.querySelector('#generate');
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector('#password'); 
-
+  // User input is assigned to password
   passwordText.value = password;
 }
 
