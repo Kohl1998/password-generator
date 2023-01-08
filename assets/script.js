@@ -110,7 +110,12 @@ console.log(getRandom());
 // Function to generate password with user input
 // Use prompt to collect input from user
 function generatePassword() {
-var Userinput = prompt("Enter a password between 8 to 64 characters long") 
+var Userinput = prompt("Enter a password between 8 to 64 characters long", "8");
+if (Userinput > 8 || Userinput < 64) {
+  // passes validation
+} else if (Userinput < 8 || Userinput > 64) {
+  // fails validation
+} 
 }
 
 // Get references to the #generate element
