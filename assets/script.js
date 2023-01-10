@@ -103,7 +103,7 @@ function getPasswordOptions() {
 function getRandom(arr) {
   // Will select element from new concatenated array
 TotalArray = Math.floor[(Math.random * AllCharacters.length)]
-return arr
+RandomArray = prompt(Math.floor[Math.random * AllCharacters.length])
 }
 
 
@@ -115,13 +115,20 @@ var Userconfirmation = confirm("Would you like to generate a random password");
 if (Userconfirmation) {
   alert("Here are the password character options: ")
   getPasswordOptions();
+} else if (Userconfirmation === false) {
+  console.log("Please select 'Ok' to proceed")
 }
 // add validation to make sure user 
-prompt("Would you like the password to include mixed characters?");
+prompt("Would you like the password to include mixed characters?")
+if (prompt === false) {
+  console.log("Please type an answer")
+};
 var Userinput = prompt("Please specify the length of your password; the length is 10 - 64 characters");
 if (Userinput => 10 || Userinput <= 64) {
-  getRandom();
-} 
+  alert(TotalArray);
+} else if (Userinput < 10 || Userinput > 64 ||  Userinput == null) {
+  console.log("Please enter the correct length of characters")
+}
 }
 
 // Get references to the #generate element
