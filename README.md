@@ -20,9 +20,7 @@ Lastly, once I was done I pushed all the updates to my remote repository from my
 
 ## Usage
 
-```md
-    ![alt text](assets/images/Javascript Algorithm Deployment.png)
-    ```
+N/A
 
 ## Credits
 
