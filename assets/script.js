@@ -88,22 +88,61 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+/* var LC = Math.floor[(Math.random * lowerCasedCharacters.length)]
+var UP = Math.floor[(Math.random * upperCasedCharacters.length)]
+var Num = Math.floor[(Math.random * numericCharacters.length)]
+var SC = Math.floor[(Math.random * specialCharacters.length)] */
+
+
+
 // Concatenate all arrays
 var AllCharacters = specialCharacters.concat(numericCharacters, lowerCasedCharacters, upperCasedCharacters)
 console.log(AllCharacters);
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-  alert(AllCharacters)
+  var Userinput = window.prompt("Please specify the length of your password; the length is 10 - 64 characters");
+  if (Userinput > 10 || Userinput < 64) {
+    var Lowercase = confirm("Would like the password to include lowercase letters enter: LC")
+    var Uppercase = confirm("Would like the password to include uppercase letters enter: UC")
+    var Numbers = confirm("Would like the password to include numeric letters enter: Num")
+    var Specialcharcters = confirm("Would like the password to include special letters enter: SC")
+    if (Lowercase || Numbers || Uppercase || Specialcharcters) {
+      return getRandom(Lowercase, Uppercase, Numbers, Specialcharcters, Userinput);
+    }
+  }
 }
 
 
 
 // Function for getting a random element from an array
-function getRandom(arr) {
+function getRandom(Lowercase, Uppercase, Numbers, SpecialCharacters, Userinput) {
+  var finalPassword = ""
+  for (var i = 0; i < Userinput; i++) {
+    if (Lowercase && finalPassword.length < Userinput) { 
+      // Math floors gets rid of decimal 
+      var index = Math.floor(Math.random() * lowerCasedCharacters.length)
+      finalPassword = finalPassword + lowerCasedCharacters[index]
+    }
+    if (Uppercase && finalPassword.length < Userinput) {
+      var index = Math.floor(Math.random() * upperCasedCharacters.length)
+      finalPassword = finalPassword + upperCasedCharacters[index]
+    }
+    if (Numbers && finalPassword.length < Userinput) {
+      var index = Math.floor(Math.random() * numericCharacters.length)
+      finalPassword = finalPassword + numericCharacters[index]
+    }
+    if (SpecialCharacters && finalPassword.length < Userinput) {
+      var index = Math.floor(Math.random() * specialCharacters.length)
+      finalPassword = finalPassword + specialCharacters[index]
+    } 
+  }
+  return finalPassword
   // Will select element from new concatenated array
-TotalArray = Math.floor[(Math.random * AllCharacters.length)]
-RandomArray = prompt(Math.floor[Math.random * AllCharacters.length])
+  /* var LC = Math.floor[(Math.random * lowerCasedCharacters.length)]
+  var UP = Math.floor[(Math.random * upperCasedCharacters.length)]
+  var Num = Math.floor[(Math.random * numericCharacters.length)]
+  var SC = Math.floor[(Math.random * specialCharacters.length)] */
 }
 
 
@@ -111,25 +150,17 @@ RandomArray = prompt(Math.floor[Math.random * AllCharacters.length])
 
 // Function to generate password with user input
 function generatePassword() {
-var Userconfirmation = confirm("Would you like to generate a random password");
-if (Userconfirmation) {
-  alert("Here are the password character options: ")
-  getPasswordOptions();
-} else if (Userconfirmation === false) {
-  console.log("Please select 'Ok' to proceed")
+  var Userconfirmation = window.confirm("Would you like to generate a random password");
+  if (Userconfirmation) {
+    alert("Here are the password character options: ")
+    return getPasswordOptions();
+  } else if (Userconfirmation === false) {
+    console.log("Please select 'Ok' to proceed")
+  }
+  // add validation to make sure user 
+  return ""
 }
-// add validation to make sure user 
-prompt("Would you like the password to include mixed characters?")
-if (prompt === false) {
-  console.log("Please type an answer")
-};
-var Userinput = prompt("Please specify the length of your password; the length is 10 - 64 characters");
-if (Userinput => 10 || Userinput <= 64) {
-  alert(TotalArray);
-} else if (Userinput < 10 || Userinput > 64 ||  Userinput == null) {
-  console.log("Please enter the correct length of characters")
-}
-}
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
@@ -137,7 +168,7 @@ var generateBtn = document.querySelector('#generate');
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector('#password'); 
+  var passwordText = document.querySelector('#password');
   // User input is assigned to password
   passwordText.value = password;
 }
