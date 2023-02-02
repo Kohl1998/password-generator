@@ -8,8 +8,6 @@ For this project I was provided with starter code that included HTML/CSS, so all
 
 During the process I learnt that I still have so much to improve including my logical thinking when trackling a problem. 
 
-One thing to mention is that the project is not completed; I just wanted to update the README to give other developers context on the project. 
-
 ## Installation
 
 I setup a remote repo on Github to work from, which I then cloned to my local repository so I can have the two in sync. 
@@ -18,18 +16,19 @@ Afterwards, I used vscode which is an integrated development environment which a
 
 Lastly, once I was done I pushed all the updates to my remote repository from my local repo using commits, and once I was happy I deployed the changes to the live website.
 
-## Usage
+## Screenshot 
 
-N/A
+[![password-generator.png](https://i.postimg.cc/gkPxQcyT/password-generator.png)](https://postimg.cc/WtXpJvHG)
 
 ## Credits
 
 I used 'Slack' for support - https://slack.com/intl/en-gb
 I used 'W3 School' for support - https://www.w3schools.com/js/js_random.asp
+I used 'Post Image' for support - https://postimg.cc/WtXpJvHG/1a62286a
 
 ## License
 
-Please refer to the LICENSE in the repo.
+MIT license
 
 ## Features
 
@@ -37,4 +36,4 @@ For this application the user can generate random passwords by answering the pro
 
 ## Link
 
-N/A
+https://kohl1998.github.io/password-generator/
