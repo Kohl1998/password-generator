@@ -28,7 +28,7 @@ I used 'Post Image' for support - https://postimg.cc/WtXpJvHG/1a62286a
 
 ## License
 
-MIT license
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Features
 
